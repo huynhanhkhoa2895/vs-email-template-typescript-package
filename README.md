@@ -24,7 +24,7 @@ To be able to use email templates, you must render HTML String. That won't be a 
 ```
 ## To
 ```
-import Template from 'vs-email-template-typescript-package';
+import Template from 'vs-email-template';
 function renderTemplate(){
     return Template()
         .title('This is Title Mail', { 'margin-bottom': '20px' })
@@ -43,16 +43,16 @@ function renderTemplate(){
 ## Package manager
 Using npm:
 ```
-npm install vs-email-template-typescript-package
+npm install vs-email-template
 ```
 Using yarn:
 ```
-yarn add vs-email-template-typescript-package
+yarn add vs-email-template
 ```
 # Usage
 ## Example
 ```
-import Template from 'vs-email-template-typescript-package';
+import Template from 'vs-email-template';
 
 function renderTemplate(){
     return Template()
@@ -62,20 +62,24 @@ function renderTemplate(){
 }
 ```
 We can use these are API to choose type of render
-```
-1. title(content: string, style?)
-2. text(content: string, style?)
-3. title(content: string, style?)
-4. custom(content: string)
-5. list(data: {[key : string] : string}, styleContainer?, style?)
-```
+
+| API                                                            | Return    |
+|----------------------------------------------------------------|-----------|
+| title(content: string, style?)                                 | class     |
+| text(content: string, style?)                                  | class |
+| custom(content: string)                                        | class |
+| list(data: {[key : string] : string}, styleContainer?, style?) | class |
+| getDefaultStyle()                                              | JSON      |
+| setDefaultStyle(style)                                         | void      |
+| render()                                                  | HTML Code |
+
 Then we need use function <b>render()</b> to render a string HTML and we can use that in email template
 
 
 
 ## With multiple paragraph
 ```
-import Template from 'vs-email-template-typescript-package';
+import Template from 'vs-email-template';
 
 function renderTemplate(){
     return Template()
@@ -91,7 +95,7 @@ function renderTemplate(){
 ```
 ## With custom tag if you need to add some tag 
 ```
-import Template from 'vs-email-template-typescript-package';
+import Template from 'vs-email-template';
 
 function renderTemplate(){
     const customIntro = Template().tag('div').tag('p',{color: "red"}).content('hello this is intro')

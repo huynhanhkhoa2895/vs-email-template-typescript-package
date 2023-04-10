@@ -2,7 +2,7 @@ export default class EmailTemplate implements IEmailTemplate {
     private defaultStyleText;
     content: string;
     constructor();
-    getDefaultStyle(style?: IStyle): IStyle;
+    getDefaultStyle(): IStyle;
     setDefaultStyle(style?: IStyle): this;
     tag(tag: TagProps, style?: IStyle): ITagHandle;
     title(text: string, style?: IStyle): this;

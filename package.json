@@ -1,6 +1,6 @@
 {
-  "name": "vs-email-template-typescript-package",
-  "version": "1.1.8",
+  "name": "vs-email-template",
+  "version": "1.0.3",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -13,7 +13,7 @@ export default class EmailTemplate implements IEmailTemplate{
 
   }
 
-  getDefaultStyle(style? : IStyle){
+  getDefaultStyle(){
     return this.defaultStyleText;
   }
 
